@@ -30,10 +30,11 @@ public class ClientDAO {
         }
     }
     
-    // Récupérer tous les clients
+    // Récupérer tous les clients (version améliorée pour éviter les doublons)
     public List<Client> getAll() {
         List<Client> clients = new ArrayList<>();
-        String sql = "SELECT * FROM client ORDER BY nom";
+        String sql = "SELECT DISTINCT id, nom, entreprise, contact, email, telephone, adresse, date_creation " +
+                     "FROM client ORDER BY nom";
         
         try (Connection conn = DBConnection.getConnection();
              Statement stmt = conn.createStatement();
@@ -160,5 +161,45 @@ public class ClientDAO {
         }
         
         return clients;
+    }
+    
+    // Nouvelle méthode pour nettoyer les doublons
+    public boolean nettoyerDoublons() {
+        String sql = "DELETE FROM client WHERE id NOT IN (" +
+                     "SELECT MIN(id) FROM client GROUP BY nom, entreprise, email)";
+        
+        try (Connection conn = DBConnection.getConnection();
+             Statement stmt = conn.createStatement()) {
+            
+            int rowsAffected = stmt.executeUpdate(sql);
+            System.out.println("Doublons supprimés : " + rowsAffected + " lignes");
+            return true;
+            
+        } catch (SQLException e) {
+            System.err.println("Erreur lors du nettoyage des doublons : " + e.getMessage());
+            return false;
+        }
+    }
+    
+    // Nouvelle méthode pour vérifier s'il y a des doublons
+    public boolean hasDoublons() {
+        String sql = "SELECT COUNT(*) as total, COUNT(DISTINCT nom || '|' || COALESCE(entreprise, '') || '|' || COALESCE(email, '')) as unique_count " +
+                     "FROM client";
+        
+        try (Connection conn = DBConnection.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+            
+            if (rs.next()) {
+                int total = rs.getInt("total");
+                int uniqueCount = rs.getInt("unique_count");
+                return total > uniqueCount;
+            }
+            
+        } catch (SQLException e) {
+            System.err.println("Erreur lors de la vérification des doublons : " + e.getMessage());
+        }
+        
+        return false;
     }
 } 
