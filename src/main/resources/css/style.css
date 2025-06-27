@@ -123,6 +123,7 @@
     -fx-border-color: #dee2e6;
     -fx-border-radius: 8px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+    cursor: pointer;
 }
 
 .menu-button:hover {

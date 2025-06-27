@@ -1,6 +1,6 @@
-package com.facturation;
+package test;
 
-import com.facturation.model.Prestation;
+import model.Prestation;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import org.junit.Test;
