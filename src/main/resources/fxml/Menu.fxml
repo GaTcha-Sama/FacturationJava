@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 
 <VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
-      fx:controller="com.facturation.controller.MenuController" styleClass="menu-container">
+      fx:controller="controller.MenuController" styleClass="menu-container">
     
     <padding>
         <Insets top="20" right="20" bottom="20" left="20"/>

@@ -1,7 +1,7 @@
-package com.facturation.dao;
+package dao;
 
-import com.facturation.model.Prestation;
-import com.facturation.util.DBConnection;
+import model.Prestation;
+import util.DBConnection;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalTime;

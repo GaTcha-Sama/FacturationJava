@@ -1,12 +1,9 @@
-package com.facturation.util;
+package util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.IOException;
 
 public class DBConnection {
     private static final String DB_URL = "jdbc:sqlite:facturation.db";

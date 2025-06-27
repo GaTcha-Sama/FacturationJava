@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 
 <VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
-      fx:controller="com.facturation.controller.PrestationController" spacing="20">
+      fx:controller="controller.PrestationController" spacing="20">
     
     <padding>
         <Insets top="20" right="20" bottom="20" left="20"/>
@@ -26,76 +26,80 @@
     </HBox>
 
     <!-- Formulaire -->
-    <VBox spacing="15" maxWidth="500">
-        
-        <!-- Type de prestation -->
-        <VBox spacing="5">
-            <Label text="Type de prestation :" styleClass="form-label"/>
-            <ComboBox fx:id="typeComboBox" promptText="Sélectionner le type" styleClass="form-field"/>
-        </VBox>
-        
-        <!-- Date -->
-        <VBox spacing="5">
-            <Label text="Date :" styleClass="form-label"/>
-            <DatePicker fx:id="datePicker" styleClass="form-field"/>
-        </VBox>
-        
-        <!-- Client -->
-        <VBox spacing="5">
-            <Label text="Client :" styleClass="form-label"/>
-            <ComboBox fx:id="clientComboBox" promptText="Sélectionner le client" styleClass="form-field"/>
-        </VBox>
-        
-        <!-- Entreprise -->
-        <VBox spacing="5">
-            <Label text="Entreprise :" styleClass="form-label"/>
-            <TextField fx:id="entrepriseField" promptText="Nom de l'entreprise" styleClass="form-field"/>
-        </VBox>
-        
-        <!-- Champs spécifiques à la formation -->
-        <VBox fx:id="formationFields" spacing="5" visible="false">
-            <Label text="Module de formation :" styleClass="form-label"/>
-            <TextField fx:id="moduleField" promptText="Ex: Java Avancé, Spring Framework" styleClass="form-field"/>
-            
-            <Label text="Classe :" styleClass="form-label"/>
-            <TextField fx:id="classeField" promptText="Ex: Développeurs, Équipe Tech" styleClass="form-field"/>
-            
-            <HBox spacing="10">
-                <VBox spacing="5" HBox.hgrow="ALWAYS">
-                    <Label text="Heure de début :" styleClass="form-label"/>
-                    <TextField fx:id="heureDebutField" promptText="09:00" styleClass="form-field"/>
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+        <content>
+            <VBox spacing="15" maxWidth="500">
+                
+                <!-- Type de prestation -->
+                <VBox spacing="5">
+                    <Label text="Type de prestation :" styleClass="form-label"/>
+                    <ComboBox fx:id="typeComboBox" promptText="Sélectionner le type" styleClass="form-field"/>
                 </VBox>
-                <VBox spacing="5" HBox.hgrow="ALWAYS">
-                    <Label text="Heure de fin :" styleClass="form-label"/>
-                    <TextField fx:id="heureFinField" promptText="17:00" styleClass="form-field"/>
+                
+                <!-- Date -->
+                <VBox spacing="5">
+                    <Label text="Date :" styleClass="form-label"/>
+                    <DatePicker fx:id="datePicker" styleClass="form-field"/>
                 </VBox>
-            </HBox>
-        </VBox>
-        
-        <!-- Champs spécifiques à la consultation -->
-        <VBox fx:id="consultationFields" spacing="5" visible="false">
-            <Label text="Description :" styleClass="form-label"/>
-            <TextArea fx:id="descriptionArea" promptText="Description de la consultation..." 
-                      prefRowCount="3" styleClass="form-field"/>
-            
-            <Label text="TJM (Taux Journalier Moyen) :" styleClass="form-label"/>
-            <TextField fx:id="tjmField" promptText="350" styleClass="form-field"/>
-        </VBox>
-        
-        <!-- Montant calculé -->
-        <VBox spacing="5" styleClass="montant-box">
-            <Label text="Montant calculé :" styleClass="form-label"/>
-            <Label fx:id="montantLabel" text="0.00 €" styleClass="montant-value"/>
-        </VBox>
-        
-        <!-- Boutons -->
-        <HBox spacing="10" alignment="CENTER">
-            <Button text="Calculer" onAction="#handleCalculer" styleClass="button-success"/>
-            <Button text="Enregistrer" onAction="#handleEnregistrer" styleClass="button-primary"/>
-            <Button text="Annuler" onAction="#handleAnnuler" styleClass="button-danger"/>
-        </HBox>
-        
-        <!-- Message -->
-        <Label fx:id="messageLabel" styleClass="message-label" visible="false"/>
-    </VBox>
+                
+                <!-- Client -->
+                <VBox spacing="5">
+                    <Label text="Client :" styleClass="form-label"/>
+                    <ComboBox fx:id="clientComboBox" promptText="Sélectionner le client" styleClass="form-field"/>
+                </VBox>
+                
+                <!-- Entreprise -->
+                <VBox spacing="5">
+                    <Label text="Entreprise :" styleClass="form-label"/>
+                    <TextField fx:id="entrepriseField" promptText="Nom de l'entreprise" styleClass="form-field"/>
+                </VBox>
+                
+                <!-- Champs spécifiques à la formation -->
+                <VBox fx:id="formationFields" spacing="5" visible="false">
+                    <Label text="Module de formation :" styleClass="form-label"/>
+                    <TextField fx:id="moduleField" promptText="Ex: Java Avancé, Spring Framework" styleClass="form-field"/>
+                    
+                    <Label text="Classe :" styleClass="form-label"/>
+                    <TextField fx:id="classeField" promptText="Ex: Développeurs, Équipe Tech" styleClass="form-field"/>
+                    
+                    <HBox spacing="10">
+                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                            <Label text="Heure de début :" styleClass="form-label"/>
+                            <TextField fx:id="heureDebutField" promptText="09:00" styleClass="form-field"/>
+                        </VBox>
+                        <VBox spacing="5" HBox.hgrow="ALWAYS">
+                            <Label text="Heure de fin :" styleClass="form-label"/>
+                            <TextField fx:id="heureFinField" promptText="17:00" styleClass="form-field"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+                
+                <!-- Champs spécifiques à la consultation -->
+                <VBox fx:id="consultationFields" spacing="5" visible="false">
+                    <Label text="Description :" styleClass="form-label"/>
+                    <TextArea fx:id="descriptionArea" promptText="Description de la consultation..." 
+                              prefRowCount="3" styleClass="form-field"/>
+                    
+                    <Label text="TJM (Taux Journalier Moyen) :" styleClass="form-label"/>
+                    <TextField fx:id="tjmField" promptText="350" styleClass="form-field"/>
+                </VBox>
+                
+                <!-- Montant calculé -->
+                <VBox spacing="5" styleClass="montant-box">
+                    <Label text="Montant calculé :" styleClass="form-label"/>
+                    <Label fx:id="montantLabel" text="0.00 €" styleClass="montant-value"/>
+                </VBox>
+                
+                <!-- Boutons -->
+                <HBox spacing="10" alignment="CENTER">
+                    <Button text="Calculer" onAction="#handleCalculer" styleClass="button-success"/>
+                    <Button text="Enregistrer" onAction="#handleEnregistrer" styleClass="button-primary"/>
+                    <Button text="Annuler" onAction="#handleAnnuler" styleClass="button-danger"/>
+                </HBox>
+                
+                <!-- Message -->
+                <Label fx:id="messageLabel" styleClass="message-label" visible="false"/>
+            </VBox>
+        </content>
+    </ScrollPane>
 </VBox> 

@@ -1,7 +1,7 @@
-package com.facturation.dao;
+package dao;
 
-import com.facturation.model.Client;
-import com.facturation.util.DBConnection;
+import model.Client;
+import util.DBConnection;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

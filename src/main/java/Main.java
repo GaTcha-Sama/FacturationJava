@@ -1,13 +1,13 @@
-package com.facturation;
+// package main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import com.facturation.util.DBConnection;
+import util.DBConnection;
 
-public class MainApp extends Application {
+public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {

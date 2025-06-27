@@ -7,7 +7,7 @@
 
 <VBox alignment="CENTER" spacing="20" styleClass="login-container" 
       xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
-      fx:controller="com.facturation.controller.LoginController">
+      fx:controller="controller.LoginController">
     
     <padding>
         <Insets top="30" right="40" bottom="30" left="40"/>
@@ -27,35 +27,39 @@
     </Label>
 
     <!-- Formulaire de connexion -->
-    <VBox spacing="15" maxWidth="300">
-        
-        <!-- Email -->
-        <VBox spacing="5">
-            <Label text="Email :" styleClass="form-label"/>
-            <TextField fx:id="emailField" promptText="Entrez votre email" styleClass="form-field"/>
-        </VBox>
-        
-        <!-- Mot de passe -->
-        <VBox spacing="5">
-            <Label text="Mot de passe :" styleClass="form-label"/>
-            <PasswordField fx:id="passwordField" promptText="Entrez votre mot de passe" styleClass="form-field"/>
-        </VBox>
-        
-        <!-- Bouton de connexion -->
-        <Button text="Se connecter" onAction="#handleLogin" styleClass="login-button">
-            <font>
-                <Font size="14" name="System Bold"/>
-            </font>
-        </Button>
-        
-        <!-- Message d'erreur -->
-        <Label fx:id="errorLabel" styleClass="error-label" visible="false"/>
-        
-        <!-- Informations de connexion -->
-        <VBox spacing="5" styleClass="info-box">
-            <Label text="Compte de test :" styleClass="info-label"/>
-            <Label text="Email : admin@example.com" styleClass="info-text"/>
-            <Label text="Mot de passe : admin123" styleClass="info-text"/>
-        </VBox>
-    </VBox>
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+        <content>
+            <VBox spacing="15" maxWidth="600">
+                
+                <!-- Email -->
+                <VBox spacing="5">
+                    <Label text="Email :" styleClass="form-label"/>
+                    <TextField fx:id="emailField" promptText="Entrez votre email" styleClass="form-field"/>
+                </VBox>
+                
+                <!-- Mot de passe -->
+                <VBox spacing="5">
+                    <Label text="Mot de passe :" styleClass="form-label"/>
+                    <PasswordField fx:id="passwordField" promptText="Entrez votre mot de passe" styleClass="form-field"/>
+                </VBox>
+                
+                <!-- Bouton de connexion -->
+                <Button text="Se connecter" onAction="#handleLogin" styleClass="login-button">
+                    <font>
+                        <Font size="14" name="System Bold"/>
+                    </font>
+                </Button>
+                
+                <!-- Message d'erreur -->
+                <Label fx:id="errorLabel" styleClass="error-label" visible="false"/>
+                
+                <!-- Informations de connexion -->
+                <VBox spacing="5" styleClass="info-box">
+                    <Label text="Compte de test :" styleClass="info-label"/>
+                    <Label text="Email : admin@example.com" styleClass="info-text"/>
+                    <Label text="Mot de passe : admin123" styleClass="info-text"/>
+                </VBox>
+            </VBox>
+        </content>
+    </ScrollPane>
 </VBox> 

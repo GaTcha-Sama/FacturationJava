@@ -1,4 +1,4 @@
-package com.facturation.model;
+package model;
 
 public class Utilisateur {
     private int id;
