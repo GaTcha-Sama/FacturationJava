@@ -10,7 +10,7 @@
       fx:controller="controller.LoginController">
     
     <padding>
-        <Insets top="30" right="40" bottom="30" left="40"/>
+        <Insets top="40" right="50" bottom="40" left="50"/>
     </padding>
 
     <!-- Titre -->
@@ -29,7 +29,7 @@
     <!-- Formulaire de connexion -->
     <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
         <content>
-            <VBox spacing="15" maxWidth="600">
+            <VBox spacing="15" maxWidth="500">
                 
                 <!-- Email -->
                 <VBox spacing="5">

@@ -93,7 +93,15 @@ public class DBConnection {
             // Insérer quelques clients de test
             stmt.execute("INSERT OR IGNORE INTO client (nom, entreprise, contact, email) VALUES " +
                         "('Jean Dupont', 'Entreprise ABC', 'Jean Dupont', 'jean.dupont@abc.com'), " +
-                        "('Marie Martin', 'Société XYZ', 'Marie Martin', 'marie.martin@xyz.com')");
+                        "('Marie Martin', 'Société XYZ', 'Marie Martin', 'marie.martin@xyz.com'), " +
+                        "('Pierre Dubois', 'Entreprise DEF', 'Pierre Dubois', 'pierre.dubois@def.com'), " +
+                        "('Sophie Leblanc', 'Société GHI', 'Sophie Leblanc', 'sophie.leblanc@ghi.com'), " +
+                        "('Lucas Girard', 'Entreprise JKL', 'Lucas Girard', 'lucas.girard@jkl.com'), " +
+                        "('Camille Moreau', 'Société MNO', 'Camille Moreau', 'camille.moreau@mno.com'), " +
+                        "('Thomas Perrin', 'Entreprise PQR', 'Thomas Perrin', 'thomas.perrin@pqr.com'), " +
+                        "('Emma Martin', 'Société STU', 'Emma Martin', 'emma.martin@stu.com'), " +
+                        "('Noé Leblanc', 'Entreprise VWX', 'Noé Leblanc', 'noe.leblanc@vwx.com'), " +
+                        "('Léo Girard', 'Société YZA', 'Léo Girard', 'leo.girard@yza.com')");
 
         }
     }

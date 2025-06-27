@@ -7,7 +7,7 @@
 /* Écran de connexion */
 .login-container {
     -fx-background-color: linear-gradient(to bottom right, #4a90e2, #357abd);
-    -fx-padding: 20px;
+    -fx-padding: 30px;
 }
 
 .title-label {
@@ -27,8 +27,9 @@
 .form-field {
     -fx-background-color: white;
     -fx-background-radius: 5px;
-    -fx-padding: 10px;
+    -fx-padding: 12px;
     -fx-font-size: 14px;
+    -fx-min-height: 20px;
 }
 
 .login-button {
@@ -54,10 +55,11 @@
 
 .info-box {
     -fx-background-color: rgba(255, 255, 255, 0.1);
-    -fx-padding: 15px;
+    -fx-padding: 20px;
     -fx-background-radius: 5px;
     -fx-border-color: rgba(255, 255, 255, 0.3);
     -fx-border-radius: 5px;
+    -fx-margin: 10px 0;
 }
 
 .info-label {

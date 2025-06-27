@@ -19,7 +19,7 @@ public class Main extends Application {
         Parent root = loader.load();
         
         // Créer la scène avec le CSS
-        Scene scene = new Scene(root, 400, 300);
+        Scene scene = new Scene(root, 600, 500);
         scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
         
         primaryStage.setTitle("Gestion des Factures - Micro-Entrepreneur");
