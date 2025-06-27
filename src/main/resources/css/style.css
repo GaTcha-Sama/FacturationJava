@@ -1,0 +1,232 @@
+/* Style général */
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #f5f5f5;
+}
+
+/* Écran de connexion */
+.login-container {
+    -fx-background-color: linear-gradient(to bottom right, #4a90e2, #357abd);
+    -fx-padding: 20px;
+}
+
+.title-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.subtitle-label {
+    -fx-text-fill: #e0e0e0;
+}
+
+.form-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.form-field {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.login-button {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 12px 30px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #218838;
+}
+
+.error-label {
+    -fx-text-fill: #dc3545;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(220, 53, 69, 0.1);
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+}
+
+.info-box {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-padding: 15px;
+    -fx-background-radius: 5px;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-radius: 5px;
+}
+
+.info-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.info-text {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 12px;
+}
+
+/* Menu principal */
+.menu-container {
+    -fx-background-color: #f8f9fa;
+}
+
+.header {
+    -fx-background-color: white;
+    -fx-padding: 15px 20px;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1 0;
+}
+
+.main-title {
+    -fx-text-fill: #2c3e50;
+}
+
+.user-info {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 12px;
+}
+
+.logout-button {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: #c82333;
+}
+
+.section-title {
+    -fx-text-fill: #2c3e50;
+}
+
+.menu-button {
+    -fx-background-color: white;
+    -fx-text-fill: #2c3e50;
+    -fx-background-radius: 8px;
+    -fx-padding: 20px;
+    -fx-min-width: 200px;
+    -fx-min-height: 80px;
+    -fx-cursor: hand;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.menu-button:hover {
+    -fx-background-color: #e9ecef;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 8, 0, 0, 3);
+}
+
+.footer {
+    -fx-background-color: white;
+    -fx-padding: 15px;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1 0 0 0;
+}
+
+.footer-text {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 12px;
+}
+
+/* Tableaux */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 5px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #495057;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-border-color: #f1f3f4;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+
+/* Boutons généraux */
+.button {
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button-primary {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+
+.button-primary:hover {
+    -fx-background-color: #0056b3;
+}
+
+.button-success {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+}
+
+.button-success:hover {
+    -fx-background-color: #218838;
+}
+
+.button-danger {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+}
+
+.button-danger:hover {
+    -fx-background-color: #c82333;
+}
+
+/* Champs de formulaire */
+.text-field, .password-field, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4px;
+    -fx-padding: 8px 12px;
+}
+
+.text-field:focused, .password-field:focused, .combo-box:focused {
+    -fx-border-color: #007bff;
+    -fx-border-width: 2px;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #495057;
+}
+
+/* Messages d'erreur */
+.error-message {
+    -fx-text-fill: #dc3545;
+    -fx-font-weight: bold;
+}
+
+.success-message {
+    -fx-text-fill: #28a745;
+    -fx-font-weight: bold;
+} 

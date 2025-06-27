@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20" styleClass="login-container" 
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.facturation.controller.LoginController">
+    
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40"/>
+    </padding>
+
+    <!-- Titre -->
+    <Label text="Gestion des Factures" styleClass="title-label">
+        <font>
+            <Font size="24" name="System Bold"/>
+        </font>
+    </Label>
+    
+    <Label text="Micro-Entrepreneur" styleClass="subtitle-label">
+        <font>
+            <Font size="14" name="System"/>
+        </font>
+    </Label>
+
+    <!-- Formulaire de connexion -->
+    <VBox spacing="15" maxWidth="300">
+        
+        <!-- Email -->
+        <VBox spacing="5">
+            <Label text="Email :" styleClass="form-label"/>
+            <TextField fx:id="emailField" promptText="Entrez votre email" styleClass="form-field"/>
+        </VBox>
+        
+        <!-- Mot de passe -->
+        <VBox spacing="5">
+            <Label text="Mot de passe :" styleClass="form-label"/>
+            <PasswordField fx:id="passwordField" promptText="Entrez votre mot de passe" styleClass="form-field"/>
+        </VBox>
+        
+        <!-- Bouton de connexion -->
+        <Button text="Se connecter" onAction="#handleLogin" styleClass="login-button">
+            <font>
+                <Font size="14" name="System Bold"/>
+            </font>
+        </Button>
+        
+        <!-- Message d'erreur -->
+        <Label fx:id="errorLabel" styleClass="error-label" visible="false"/>
+        
+        <!-- Informations de connexion -->
+        <VBox spacing="5" styleClass="info-box">
+            <Label text="Compte de test :" styleClass="info-label"/>
+            <Label text="Email : admin@example.com" styleClass="info-text"/>
+            <Label text="Mot de passe : admin123" styleClass="info-text"/>
+        </VBox>
+    </VBox>
+</VBox> 

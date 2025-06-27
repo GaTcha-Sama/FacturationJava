@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.facturation.controller.MenuController" styleClass="menu-container">
+    
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <!-- En-tête -->
+    <HBox alignment="CENTER_LEFT" spacing="20" styleClass="header">
+        <Label text="Gestion des Factures" styleClass="main-title">
+            <font>
+                <Font size="28" name="System Bold"/>
+            </font>
+        </Label>
+        
+        <Region HBox.hgrow="ALWAYS"/>
+        
+        <Label fx:id="userLabel" text="Connecté en tant que : Admin" styleClass="user-info"/>
+        
+        <Button text="Déconnexion" onAction="#handleLogout" styleClass="logout-button"/>
+    </HBox>
+
+    <!-- Menu principal -->
+    <VBox spacing="20" alignment="CENTER" VBox.vgrow="ALWAYS">
+        
+        <Label text="Menu Principal" styleClass="section-title">
+            <font>
+                <Font size="20" name="System Bold"/>
+            </font>
+        </Label>
+
+        <!-- Grille de boutons -->
+        <GridPane hgap="20" vgap="20" alignment="CENTER">
+            
+            <!-- Gestion des prestations -->
+            <Button text="Ajouter une Prestation" onAction="#handleAddPrestation" 
+                    styleClass="menu-button" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <font>
+                    <Font size="14" name="System Bold"/>
+                </font>
+            </Button>
+            
+            <!-- Gestion des clients -->
+            <Button text="Gérer les Clients" onAction="#handleManageClients" 
+                    styleClass="menu-button" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <font>
+                    <Font size="14" name="System Bold"/>
+                </font>
+            </Button>
+            
+            <!-- Générer facture -->
+            <Button text="Générer Facture" onAction="#handleGenerateFacture" 
+                    styleClass="menu-button" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <font>
+                    <Font size="14" name="System Bold"/>
+                </font>
+            </Button>
+            
+            <!-- Voir bilan -->
+            <Button text="Voir Bilan" onAction="#handleViewBilan" 
+                    styleClass="menu-button" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <font>
+                    <Font size="14" name="System Bold"/>
+                </font>
+            </Button>
+            
+            <!-- Liste des prestations -->
+            <Button text="Liste des Prestations" onAction="#handleListPrestations" 
+                    styleClass="menu-button" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <font>
+                    <Font size="14" name="System Bold"/>
+                </font>
+            </Button>
+            
+            <!-- Liste des factures -->
+            <Button text="Liste des Factures" onAction="#handleListFactures" 
+                    styleClass="menu-button" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <font>
+                    <Font size="14" name="System Bold"/>
+                </font>
+            </Button>
+        </GridPane>
+    </VBox>
+
+    <!-- Pied de page -->
+    <HBox alignment="CENTER" styleClass="footer">
+        <Label text="Application de gestion des factures pour micro-entrepreneurs" styleClass="footer-text"/>
+    </HBox>
+</VBox> 
