@@ -197,9 +197,9 @@ Les erreurs sont affichées dans la console avec des messages explicites.
 
 Projet d'étude - Libre d'utilisation
 
-## 👥 Auteur
+## 👥 Auteurs
 
-Projet réalisé dans le cadre d'un cours de Java avancé.
+Projet réalisé par Jérémy et Yanis dans le cadre d'un cours de Java avancé.
 
 ---
 
